@@ -171,17 +171,19 @@
                     </Grid.ColumnDefinitions>
              
 
-                    <Button Text="-" BackgroundColor="#21d3a3" FontSize="30" WidthRequest="40" Padding="0" Margin="0,10,0,5" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" />
+                    <Button x:Name="minusButton" Clicked="minusButton_Clicked" Text="-" BackgroundColor="#21d3a3" FontSize="30" WidthRequest="40" Padding="0" Margin="0,10,0,5" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" />
 
                     <Frame Grid.Column="1" Padding="0" Margin="20,7" HasShadow="True" BorderColor="White" >
                         <Entry Placeholder="Persons" 
                                Keyboard="Numeric" 
                                MaxLength="999"
                                HorizontalTextAlignment="Center"
+                               x:Name="splitEntry"                               
+                               TextChanged="splitEntry_TextChanged"
                                 />
                     </Frame>
 
-                    <Button Text="+" BackgroundColor="#21d3a3" FontSize="30" WidthRequest="40" Padding="0" Margin="0,10,0,5" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start"  />
+                    <Button x:Name="plusButton" Clicked="plusButton_Clicked" Text="+" BackgroundColor="#21d3a3" FontSize="30" WidthRequest="40" Padding="0" Margin="0,10,0,5" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start"  />
 
                 </Grid>
 
