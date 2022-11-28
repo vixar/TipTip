@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="TipTip.MainPage">
+
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#21d3a3" />
+    </Page.Behaviors>
+    <StackLayout>
+        <Frame CornerRadius="0" HeightRequest="300" BorderColor="#21d3a3">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0,5">
+                    <GradientStop Color="#21d3a3" Offset="0.5" />
+                    <GradientStop Color="#1aa8ac" Offset="0.5" />
+                </LinearGradientBrush>
+            </Frame.Background>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="10">
+                <Label Text="you pay this" TextColor="White" HorizontalOptions="Center" Margin="0, 50, 0, 25" />
+                <Label Text="$21.90" 
+                       CharacterSpacing="3" 
+                       FontSize="55" 
+                       TextColor="White" 
+                       HorizontalOptions="Center" 
+                       Margin="0,-20,0,15"/>
+
+                <Line X1="0" X2="50" Stroke="White" HorizontalOptions="Center" StrokeThickness="3"/>
+
+                <Grid HorizontalOptions="FillAndExpand" Margin="0, 20, 0, 0" ColumnSpacing="10" RowSpacing="3">
+                    <Grid.RowDefinitions >
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" 
+                           Grid.Column="0"
+                           Text="$18.25" 
+                           TextColor="White" 
+                           HorizontalOptions="End" 
+                           Margin="0, -2, 0,0" />
+
+                    <Label Grid.Row="0" 
+                           Grid.Column="1" 
+                           Text="Total" 
+                           FontSize="12" 
+                           TextColor="White" 
+                           Opacity="0.5" 
+                           HorizontalOptions="Start" />
+
+                    <Label Grid.Row="1" 
+                           Grid.Column="0"
+                           Text="$3.65 | 20%" 
+                           TextColor="White" 
+                           HorizontalOptions="End" 
+                           Margin="0, -2, 0,0" />
+
+                    <Label Grid.Row="1" 
+                           Grid.Column="1" 
+                           Text="Tip" 
+                           FontSize="12" 
+                           TextColor="White" 
+                           Opacity="0.5" 
+                           HorizontalOptions="Start" />
+
+                    <Label Grid.Row="2" 
+                           Grid.Column="0"
+                           Text="3" 
+                           TextColor="White" 
+                           HorizontalOptions="End" 
+                           Margin="0, -2, 0,0" />
+
+                    <Label Grid.Row="2" 
+                           Grid.Column="1" 
+                           Text="Persons" 
+                           FontSize="12" 
+                           TextColor="White" 
+                           Opacity="0.5" 
+                           HorizontalOptions="Start" />
+
+                </Grid>
+                <!--<HorizontalStackLayout HorizontalOptions="Center" Margin="0, 5, 0, 0" Spacing="8">
+                    <Label Text="$3.65 | 20%" TextColor="White" VerticalOptions="End" Margin="0, -2, 0,0" />
+                    <Label Text="Tip" FontSize="12" TextColor="White" Opacity="0.5" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="Center" Margin="0, 5, 0, 0" Spacing="8">
+                    <Label Text="3" TextColor="White" VerticalOptions="End" Margin="0, -2, 0,0" />
+                    <Label Text="Persons" FontSize="12" TextColor="White" Opacity="0.5" />
+                </HorizontalStackLayout>-->
+            </StackLayout>
+
+        </Frame>
+        <Frame CornerRadius="0" BackgroundColor="#ebf4f9"  BorderColor="#ebf4f9" HeightRequest="50" Padding="0">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Total" FontSize="Large" TextColor="Gray" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" Padding="10"/>
+                <Label Text="$ 54.75" FontSize="Large" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" Padding="10"/>
+            </Grid>
+
+        </Frame>
+        <Frame CornerRadius="0" BackgroundColor="White" BorderColor="White">
+            <VerticalStackLayout >
+                <Label Text="TIP PERCENTAGE" TextColor="Gray" HorizontalOptions="Center"/>
+
+                <Button Text="10%" 
+                        CharacterSpacing="1" 
+                        TextColor="#21d3a3" 
+                        Margin="0, 15" 
+                        CornerRadius="25" 
+                        BackgroundColor="Transparent" 
+                        BorderColor="#21d3a3"
+                        WidthRequest="230"
+                        BorderWidth="1"/>
+
+                <Button Text="15%" 
+                        CharacterSpacing="1" 
+                        TextColor="#21d3a3" 
+                        Margin="0, 0, 0, 15" 
+                        CornerRadius="25" 
+                        BackgroundColor="Transparent" 
+                        BorderColor="#21d3a3"
+                        WidthRequest="230"
+                        BorderWidth="1"/>
+
+                <Button Text="20%" 
+                        CharacterSpacing="1" 
+                        TextColor="#21d3a3" 
+                        Margin="0, 0, 0, 15" 
+                        CornerRadius="25" 
+                        BackgroundColor="Transparent" 
+                        BorderColor="#21d3a3"
+                        WidthRequest="230"
+                        BorderWidth="1"/>
+
+                <Label Text="CUSTOM AMOUNT" TextColor="Gray" HorizontalOptions="Center"/>
+
+                <Grid Margin="0,10,0,0" MaximumWidthRequest="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+                    <Slider Maximum="100"
+                            Minimum="0"
+                            ThumbColor="#21d3a3"
+                            MinimumTrackColor="#21d3a3"
+                            MaximumTrackColor="DarkGrey"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HeightRequest="25"
+                        />
+                    <Label Text="100%"  Grid.Row="0" Grid.Column="2" />
+                </Grid>
+
+                <Label Text="SPLIT BY PERSON" TextColor="Gray" HorizontalOptions="Center" Margin="0,30,0,0"/>
+
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+             
+
+                    <Button Text="-" BackgroundColor="#21d3a3" FontSize="30" WidthRequest="40" Padding="0" Margin="0,10,0,5" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" />
+
+                    <Frame Grid.Column="1" Padding="0" Margin="20,7" HasShadow="True" BorderColor="White" >
+                        <Entry Placeholder="Persons" 
+                               Keyboard="Numeric" 
+                               MaxLength="999"
+                               HorizontalTextAlignment="Center"
+                                />
+                    </Frame>
+
+                    <Button Text="+" BackgroundColor="#21d3a3" FontSize="30" WidthRequest="40" Padding="0" Margin="0,10,0,5" Grid.Row="0" Grid.Column="2" HorizontalOptions="Start"  />
+
+                </Grid>
+
+            </VerticalStackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
